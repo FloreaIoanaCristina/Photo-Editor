@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="4_1084_FLOREA_IOANA_CRISTINA.css">
+   
+    <title>Editor foto</title>
+</head>
+<body>
+  <div id="droparea"  ondrop="dropHandler(event);"
+  ondragover="dragOverHandler(event);">
+    <div class="dropareainner">
+      <p class="dropfiletext">Drop image here</p>
+      <p>or</p>
+      <input id="upload" type="file" accept="image/*" onchange="loadFile(event)" />
+    </div>
+    
+  </div>
+ 
+  <p>Poza</p><p><img id="output" width="200" onload="displayOnCanvas(event)"/></p>
+  <p>Canvas</p>
+  <div id="container">
+   
+    <canvas id="myCanvas" height="600" width="800" onchange="displayHist()"></canvas>
+    <canvas id="overlay" height="600" width="800" ></canvas>
+  </div>
+    <button id = "save">Save</button>
+    <button id = "crop">Crop Selection</button>
+    <label>Effects:  </label>
+    <select name="effects" id="effects" onchange="addFilter()">
+      <option value="none" selected="selected" >None</option>
+      <option value="grayscale">Black&White</option>
+      <option value="sketch">Sketch</option>
+      <option value="bright">Brightness</option>
+    </select>
+    <label>Specified width</label>
+    <input type="number" min="0" id="widthspec" onchange="addWidth()"> 
+    <label>Specified height </label>
+    <input type="number"  id="heightspec" min="0" onchange="addHeight()">
+    <button id = "restore" >Restore to original size</button>
+    <p></p>
+    <label>text</label><input type="text" id="addText" value="Your text here" >
+    <label>font-size</label><input type="number" min="1" id="addSize" value="5">
+    <label>from x</label><input type="number" min="1" id="addX" value="1">
+    <label>and from y </label><input type="number" min="1" id="addY" value="1">
+
+    <select name="colors" id="colors" onchange="changeColor()" >
+      <option value="black" selected="selected">black</option>
+      <option value="red" >red</option>
+      <option value="orange" >orange</option>
+      <option value="yellow" >yellow</option>
+      <option value="green">green</option>
+      <option value="blue">blue</option>
+      <option value="purple" >purple</option>
+      <option value="white"  >white</option>
+      <option value="pink"  >pink</option>
+    </select>
+    <button id = "textAdder" >Add text</button>
+    <p>
+    </p>
+    <button id = "sterge">Delete</button>
+
+    <script src="4_1084_FLOREA_IOANA_CRISTINA.js"></script>
+    
+ 
+</body>
+</html>

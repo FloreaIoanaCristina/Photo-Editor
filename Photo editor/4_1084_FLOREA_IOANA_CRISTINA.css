@@ -1,0 +1,59 @@
+#histograma{
+    border: 2px dotted black;
+}
+#myCanvas{
+    border: 2px solid black;
+    position: relative;
+    z-index: 1;
+    
+}
+#container {
+    position: relative;
+  }
+  #overlay {
+    border: 2px solid black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2
+  }
+
+#droparea{
+	width:400px;
+	height:120px;
+	border:7px dashed #ccc;
+	border-radius:10px;
+	vertical-align:baseline;
+	margin:0 auto;
+	text-align:center;
+	text-shadow:1px 1px 0 #fff;
+}
+#droparea p{
+	margin:7px 0;
+}
+#droparea .dropareainner{
+	margin-top:35px;
+}
+#droparea .dropfiletext{
+	font-size:18px;
+	font-weight:bold;
+	color:#555;
+}
+#droparea .uploadbtn{
+	border:1px solid #ccc;
+	background-color:#f4f4f4;
+	padding:2px 5px;
+	margin-bottom:5px;
+	border-radius:25px;
+	cursor:pointer;
+	font-weight:bold;
+	color:#777;
+}
+#droparea .uploadbtn:hover{
+	border-color:#777;
+	color:#555;
+}
+#droparea.hover{
+	border-color:#777;
+	background-color:#fff;
+}
